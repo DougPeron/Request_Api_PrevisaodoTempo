@@ -1,3 +1,5 @@
+// Site oficial da API: https://openweathermap.org/
+
 const input = document.querySelector('input');
 const button = document.querySelector('button');
 const img = document.querySelector('img');
@@ -12,7 +14,7 @@ button.addEventListener("click", () => {
     getWeatherData();
 });
 async function getWeatherData(){
-    let urlApi = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input.value)}&units=metric&APPID=c01ae4515823a6004626c2e9d5ead192`
+    let urlApi = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(input.value)}&units=metric&APPID={API ID - criar login no site da api para obter}`
     try{
         await fetch(urlApi)
         .then((res)=> res.json())
